@@ -18,7 +18,7 @@ $(document).ready(function(){
             $(".notification").removeClass("show");
         }, 5000)
 
-    })
+    })   
 
 
     // Create function to handle hourly updates
@@ -28,9 +28,7 @@ $(document).ready(function(){
         // Set a For Loop for hourly updates
         for(let a = 0; a < $(".time-block").length; a++){
             let hour = parseInt($(".time-block")[a].getAttribute("id").split("-")[1]) 
-
-        
-
+   
             // Set an IF Statement to handle past, present and future updates
             if (hour < currentHour) {
                 $(".time-block")[a].classList.add("past")
@@ -40,15 +38,15 @@ $(document).ready(function(){
             } else {
                 $(".time-block")[a].classList.remove("past")
                 $(".time-block")[a].classList.remove("present")
-                $(".time-block")[a].classList.add("future")
+                $(".time-block")[a].classList.add("future")         
             }
-        }
+        } 
     }
 
 
     hourUpdate();
 
-    let interval = setInterval(hourUpdate, 10000 )
+    let interval = setInterval(hourUpdate, 10000);
 
 
     $("#hour-9 .description").val(localStorage.getItem("9"));
