@@ -10,7 +10,13 @@ $(document).ready(function(){
 
         localStorage.setItem(hourID, value);
 
+        // Set function to save and display notification after user inputs
         $(".notification").addClass("show");
+
+        // Set function to remove displayed notification after 5 seconds
+        setTimeout(function() {
+            $(".notification").removeClass("show");
+        }, 5000)
 
     })
 }) 
