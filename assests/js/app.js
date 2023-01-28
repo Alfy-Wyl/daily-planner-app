@@ -1,5 +1,10 @@
 // Create function to store the different values user inputs
 $(document).ready(function(){
+    // Set current date and time using moment js
+    let presentMoment = moment().format("MMMM Do YYYY");
+    let showDate = document.getElementById("presentDay");
+    showDate.innerHTML = presentMoment;
+    let currentHour = moment().format('HH');
 
     // Add event listener to listen for the Save Button Click
     $(".saveBtn").on("click", function(){
