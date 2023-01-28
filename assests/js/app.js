@@ -1,10 +1,5 @@
 // Create function to store the different values user inputs
 $(document).ready(function(){
-    // Set current date and time using moment js
-    let presentMoment = moment().format("MMMM Do YYYY");
-    let showDate = document.getElementById("presentDay");
-    showDate.innerHTML = presentMoment;
-    let currentHour = moment().format('HH');
 
     // Add event listener to listen for the Save Button Click
     $(".saveBtn").on("click", function(){
@@ -26,21 +21,46 @@ $(document).ready(function(){
     })
 
 
-    // Create a function to handle cuurent time and hourly updates 
-    $(".time-block").each(function() {
-        let timeBlock = $(this).attr("id").split("-")[1];
+    // Create function to handle hourly updates
+    function hourUpdate(){
+        let currentHour = moment().hours();
 
-        // Set an IF Statement to handle past, present and future updates
-        if (currentHour === timeBlock) {
-            $(this).addClass("present");
-            $(this).children(".description").addClass("text");
-        } else if (currentHour < timeBlock) {
-            $(this).removeClass("present");
-            $(this).addClass("future");
-        } else if (currentHour > timeBlock) {
-            $(this).removeClass("future");
-            $(this).addClass("past");
+        // Set a For Loop for hourly updates
+        for(let a = 0; a < $(".time-block").length; a++){
+            let hour = parseInt($(".time-block")[a].getAttribute("id").split("-")[1]) 
+
+        
+
+            // Set an IF Statement to handle past, present and future updates
+            if (hour < currentHour) {
+                $(".time-block")[a].classList.add("past")
+            } else if(hour === currentHour){
+                $(".time-block")[a].classList.add("past")
+                $(".time-block")[a].classList.remove("present")
+            } else {
+                $(".time-block")[a].classList.remove("past")
+                $(".time-block")[a].classList.remove("present")
+                $(".time-block")[a].classList.add("future")
+            }
         }
+    }
 
-    });
+
+    hourUpdate();
+
+    let interval = setInterval(hourUpdate, 10000 )
+
+
+    $("#hour-9 .description").val(localStorage.getItem("9"));
+    $("#hour-10 .description").val(localStorage.getItem("10"));
+    $("#hour-11 .description").val(localStorage.getItem("11"));
+    $("#hour-12 .description").val(localStorage.getItem("12"));
+    $("#hour-13 .description").val(localStorage.getItem("13"));
+    $("#hour-14 .description").val(localStorage.getItem("14"));
+    $("#hour-15 .description").val(localStorage.getItem("15"));
+    $("#hour-16 .description").val(localStorage.getItem("16"));
+    $("#hour-17 .description").val(localStorage.getItem("17"));
+
+    $("#currentDay").text(moment().format("Do MMMM YYYY"))
+
 })
