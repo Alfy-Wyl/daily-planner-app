@@ -24,3 +24,8 @@ Allow a user to enter an event when they click a timeblock.
 Save the event in local storage when the save button is clicked in that timeblock.
 
 
+
+## License
+
+This project is licensed under the MIT license. 
+
