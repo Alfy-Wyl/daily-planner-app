@@ -4,7 +4,7 @@ A one page simple calendar application that allows a user to save events for eac
 
 ## Description
 
-The purpose of this app is to create organized work schedules while eliminating the need for hardcopy diaries. This app serves to be a ready to go to schedular as it is web based.
+The purpose of this app is to create organized work schedules while eliminating the need for hardcopy diaries. This app serves to be a ready to go to schedular as it is web based. jQuery and Moment JS concepts along with Vanilla Javascript were used to provide interactivity to dynamically updated HTML and CSS.
 
 
 ## Installation
