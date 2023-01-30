@@ -38,3 +38,6 @@ This project is licensed under the MIT license.
 
 ## Screenshot
 
+<img width="1440" alt="Screenshot 2023-01-30 at 22 43 43" src="https://user-images.githubusercontent.com/118228946/215613587-bc37acf5-b664-48f9-a55d-9b486ceafd23.png">
+
+
