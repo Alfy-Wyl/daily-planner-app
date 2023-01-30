@@ -4,6 +4,8 @@ A one page simple calendar application that allows a user to save events for eac
 
 ## Description
 
+The purpose of this app is to create organized work schedules while eliminating the need for hardcopy diaries. This app serves to be a ready to go to schedular as it is web based.
+
 
 ## Installation
 N/A
@@ -28,4 +30,11 @@ Save the event in local storage when the save button is clicked in that timebloc
 ## License
 
 This project is licensed under the MIT license. 
+
+
+## Link
+
+
+
+## Screenshot
 
