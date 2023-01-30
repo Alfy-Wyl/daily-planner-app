@@ -34,6 +34,8 @@ This project is licensed under the MIT license.
 
 ## Link
 
+https://alfy-wyl.github.io/daily-planner-app/
+
 
 
 ## Screenshot
